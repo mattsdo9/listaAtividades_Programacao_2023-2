@@ -3,11 +3,15 @@
     //Peça para o usuário informar o seu ano de nasicmento e calcule se ele já atingiu a maioridade. Apresente o resultado ao final do programa.
 
     //ENTRADA
-
+    const nascimento = Number(prompt(`Insira o seu ano de nascimento`).trim());
 
     //PROCESSAMENTO
-
+    const idade = 2023 - nascimento;
 
     //SAÍDA
-    
+    if (idade >= 18) {
+        document.write(`maior de idade`);
+    } else {
+        document.write(`menor de idade`);
+    }
 </script>
