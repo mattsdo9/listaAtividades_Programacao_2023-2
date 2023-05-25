@@ -6,12 +6,40 @@
     */
 
     //ENTRADA
-
+    const hemisfério = prompt("Em qual hemisfério você esta?");
+    const mesAtual = prompt("Em qual mês atual você está?");
 
     //PROCESSAMENTO
-
+    if (hemisfério == "Sul") {
+        if (mesAtual == "Janeiro" || mesAtual == "Fevereiro" || mesAtual == "Março") {
+            alert(`Está Verão!`);
+        }
+        else if (mesAtual == "Abril" || mesAtual == "Maio" || mesAtual == "Junho") {
+            alert(`Está Outono!`);
+        }
+        else if (mesAtual == "Julho" || mesAtual == "Agosto" || mesAtual == "Setembro") {
+            alert(`Está Inverno!`);
+        }
+        else if (mesAtual == "Outubro" || mesAtual == "Novembro" || mesAtual == "Dezembro") {
+            alert(`Está Primaveira!`);
+        }
+    }
+    else if (hemisfério == "Norte") {
+        if (mesAtual == "Julho" || mesAtual == "Agosto" || mesAtual == "Setembro") {
+            alert(`Está Verão!`);
+        }
+        else if (mesAtual == "Outubro" || mesAtual == "Novembro" || mesAtual == "Dezembro") {
+            alert(`Está Outono!`);
+        }
+        else if (mesAtual == "Janeiro" || mesAtual == "Fevereiro" || mesAtual == "Março") {
+            alert(`Está Inverno!`);
+        }
+        else if (mesAtual == "Abril" || mesAtual == "Maio" || mesAtual == "Junho") {
+            alert(`Está Primavera!`);
+        }
+    }
 
     //SAÍDA
 
-    
+
 </script>

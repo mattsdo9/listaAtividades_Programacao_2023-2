@@ -5,10 +5,38 @@
     */
 
     //ENTRADA
+    const n1 = Number(prompt(`Informe o primeiro número`).trim().replace(",", "."));
+    const n2 = Number(prompt(`Informe o segundo número`).trim().replace(",", "."));
+    const n3 = Number(prompt(`Informe o terceiro número`).trim().replace(",", "."));
 
-    
     //PROCESSAMENTO
-    
+
+    //1-2-3
+    if (n1 > n2 && n1>n3 && n2>n3) {
+        alert(`Ordem decrescente: ${n1}, ${n2}, ${n3}.`);
+    }
+    //1-3-2
+    if (n1 > n3 && n1>n2 && n3>n2) {
+        alert(`Ordem decrescente: ${n1}, ${n3}, ${n2}.`);
+    }
+    //2-3-1
+    if (n2 > n1 && n2>n3 && n3>n1) {
+        alert(`Ordem decrescente: ${n2}, ${n3}, ${n1}.`);
+    }
+    //2-1-3
+    if (n2 > n1 && n2>n3 && n1>n3) {
+        alert(`Ordem decrescente: ${n2}, ${n1}, ${n3}.`);
+    }
+    //3-1-2
+    if (n3 > n1 && n3>n2 && n1>n2) {
+        alert(`Ordem decrescente: ${n3}, ${n1}, ${n2}.`);
+    }
+    //3-2-1
+    if (n3 > n2 && n3>n1 && n2>n1) {
+        alert(`Ordem decrescente: ${n3}, ${n2}, ${n1}.`);
+    }
+
     //SAÍDA
-    
+
+
 </script>
