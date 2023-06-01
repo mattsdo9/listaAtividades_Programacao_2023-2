@@ -11,29 +11,7 @@
     */
 
     //ENTRADA
-    let numero = Number(prompt(`Informe um número inteiro menor que 1000`).trim())
-
-let mensagemFinal = "O número tem: <br>";
-let Cem = 0;
-let Dez = 0;
-
-if (numero > 0 && numero < 1000) {
-    Cem = Math.floor(numero / 100);
-    numero = numero % 100;
-    Dez = Math.floor(numero / 10);
-    numero = numero % 10;
-}
-if (Cem > 0) {
-    mensagemFinal = mensagemFinal + Cem + " centenas; <br>"
-}
-if (Dez > 0) {
-    mensagemFinal = mensagemFinal + Dez + " dezenas; <br> " 
-}
-if (numero > 0) {
-    mensagemFinal = mensagemFinal + numero + " unidades. "
-}
-
-document.write(mensagemFinal)
+    
 
     //PROCESSAMENTO
 
