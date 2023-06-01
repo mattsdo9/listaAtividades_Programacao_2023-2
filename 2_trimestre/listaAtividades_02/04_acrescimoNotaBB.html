@@ -9,11 +9,16 @@
     e retorna o acréscimo que o big brother receberá em sua nota pela ajuda. O acréscimo é de 1/4 da diferença das notas, se for positivo.
     */
     // entrada
-    
-    
+    const notaAntes = Number(prompt(`Informe sua nota no inicio do programa`).replace(",", "."));
+    const nota = Number(prompt(`Informe sua nota no final do programa`).replace(",", "."))
+
     // processamento
-
-    
-    // saída
-
+    if (nota - notaAntes > 0) {
+        const acrescimo = (nota - notaAntes) / 4;
+        document.write(`O acréscimo de nota recebido pelo BB será ${acrescimo.toFixed(2)}`)
+    }
+    else {
+        document.write(`Não houve melhoria na nota`)
+    }
+    //saída
 </script>
