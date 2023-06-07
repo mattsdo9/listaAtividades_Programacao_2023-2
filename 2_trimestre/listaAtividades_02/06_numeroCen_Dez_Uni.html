@@ -11,12 +11,37 @@
     */
 
     //ENTRADA
-    
+
+    let numero = Number(prompt(`Escreva um numero inteiro menor do que mil(1000)`).trim())
+
+    let ultimaMensagem = "O number tem: <br>";
+    let cem = 0;
+    let dez = 0;
 
     //PROCESSAMENTO
 
-    
+    if (numero > 0 && numero < 1000) {
+        cem = Math.floor(numero / 100);
+        numero = numero % 100;
+        dez = Math.floor(numero / 10);
+        numero = numero % 10;
+    }
+    else {
+        document.write(`Errado`);
+    }
+
+    if (cem > 0) {
+        ultimaMensagem = ultimaMensagem + cem + " centenas; <br>"
+    }
+    if (dez > 0) {
+        ultimaMensagem = ultimaMensagem + dez + " dezenas; <br> "
+    }
+    if (numero > 0) {
+        ultimaMensagem = ultimaMensagem + numero + " unidades. "
+    }
+
     //SAÍDA
 
+    document.write(ultimaMensagem)
 
 </script>

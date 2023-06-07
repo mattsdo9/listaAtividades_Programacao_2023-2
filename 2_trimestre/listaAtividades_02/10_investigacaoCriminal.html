@@ -7,13 +7,104 @@
     - "Mora perto da vítima?"
     - "Devia para a vítima?"
     - "Já trabalhou com a vítima?"
-    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+    O script deve no final emitir uma classificação sobre a participação da pessoa no crime.
+    Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino".
+    Caso contrário, ele será classificado como "Inocente".
     */
 
     //ENTRADA
 
-    //PROCESSAMENTO
+    const telefonou = prompt(`Telefonou para a vítima? ("S" para Sim e "N" para Não)`).toUpperCase().trim().replace(",", ".");
+    const local = prompt(`Esteve no local do crime? ("S" para Sim e "N" para Não)`).toUpperCase().trim().replace(",", ".");
+    const mora = prompt(`Mora perto da vítima? ("S" para Sim e "N" para Não) `).toUpperCase().trim().replace(",", ".");
+    const devia = prompt(`Devia para a vítima? ("S" para Sim e "N" para Não)`).toUpperCase().trim().replace(",", ".");
+    const trabalhou = prompt(`Já trabalhou com a vítima? ("S" para Sim e "N" para Não)`).toUpperCase().trim().replace(",", ".");
 
+    //PROCESSAMENTO
+    if (telefonou == "S" && local == "S" && mora == "S" && devia == "S" && trabalhou == "S") {
+        alert("Assassino!!!");
+    }
+    //cumplice "4"
+    else if (telefonou == "S" && local == "S" && mora == "S" && devia == "S" && trabalhou == "N") {
+        alert("Cúmplice!!!");
+    }
+    else if (telefonou == "S" && local == "S" && mora == "S" && devia == "N" && trabalhou == "S") {
+        alert("Cúmplice!!!");
+    }
+    else if (telefonou == "S" && local == "S" && mora == "N" && devia == "S" && trabalhou == "S") {
+        alert("Cúmplice!!!");
+    }
+    else if (telefonou == "S" && local == "N" && mora == "S" && devia == "S" && trabalhou == "S") {
+        alert("Cúmplice!!!");
+    }
+    else if (telefonou == "N" && local == "S" && mora == "S" && devia == "S" && trabalhou == "S") {
+        alert("Cúmplice!!!");
+    }
+    //cumplice "3"
+    else if (telefonou == "S" && local == "S" && mora == "S" && devia == "N" && trabalhou == "N") {
+        alert("Cúmplice!!!");
+    }
+    else if (telefonou == "S" && local == "S" && mora == "N" && devia == "N" && trabalhou == "S") {
+        alert("Cúmplice!!!");
+    }
+    else if (telefonou == "S" && local == "N" && mora == "N" && devia == "S" && trabalhou == "S") {
+        alert("Cúmplice!!!");
+    }
+    else if (telefonou == "N" && local == "N" && mora == "S" && devia == "S" && trabalhou == "S") {
+        alert("Cúmplice!!!");
+    }
+    else if (telefonou == "N" && local == "S" && mora == "S" && devia == "S" && trabalhou == "N") {
+        alert("Cúmplice!!!");
+    }
+    else if (telefonou == "N" && local == "S" && mora == "S" && devia == "N" && trabalhou == "S") {
+        alert("Cúmplice!!!");
+    }
+    else if (telefonou == "N" && local == "S" && mora == "N" && devia == "S" && trabalhou == "S") {
+        alert("Cúmplice!!!");
+    }
+    else if (telefonou == "S" && local == "N" && mora == "S" && devia == "N" && trabalhou == "S") {
+        alert("Cúmplice!!!");
+    }
+    else if (telefonou == "S" && local == "N" && mora == "S" && devia == "S" && trabalhou == "N") {
+        alert("Cúmplice!!!");
+    }
+    else if (telefonou == "S" && local == "S" && mora == "N" && devia == "S" && trabalhou == "N") {
+        alert("Cúmplice!!!");
+    }
+    //SUSPEITO
+    else if (telefonou == "N" && local == "N" && mora == "N" && devia == "S" && trabalhou == "S") {
+        alert("Suspeita(o)!!!");
+    }
+    else if (telefonou == "N" && local == "S" && mora == "N" && devia == "N" && trabalhou == "S") {
+        alert("Suspeita(o)!!!");
+    }
+    else if (telefonou == "N" && local == "N" && mora == "S" && devia == "N" && trabalhou == "S") {
+        alert("Suspeita(o)!!!");
+    }
+    else if (telefonou == "N" && local == "N" && mora == "S" && devia == "S" && trabalhou == "N") {
+        alert("Suspeita(o)!!!");
+    }
+    else if (telefonou == "N" && local == "S" && mora == "S" && devia == "N" && trabalhou == "N") {
+        alert("Suspeita(o)!!!");
+    }
+    else if (telefonou == "N" && local == "S" && mora == "N" && devia == "S" && trabalhou == "N") {
+        alert("Suspeita(o)!!!");
+    }
+    else if (telefonou == "S" && local == "S" && mora == "N" && devia == "N" && trabalhou == "N") {
+        alert("Suspeita(o)!!!");
+    }
+    else if (telefonou == "S" && local == "N" && mora == "S" && devia == "N" && trabalhou == "N") {
+        alert("Suspeita(o)!!!");
+    }
+    else if (telefonou == "S" && local == "N" && mora == "N" && devia == "N" && trabalhou == "S") {
+        alert("Suspeita(o)!!!");
+    }
+    else if (telefonou == "S" && local == "N" && mora == "N" && devia == "S" && trabalhou == "N") {
+        alert("Suspeita(o)!!!");
+    }
+    else {
+        alert("Inocente!!!");
+    }
     //SAÍDA
 
 </script>

@@ -1,12 +1,25 @@
 <script>
     //Problema
-    // Receba os três lados de um triângulo. Informe se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. Dica: pesquise sobre a regra para saber se os lados formam um triângulo e também sobre os tipos de triângulos.
+    // Receba os três lados de um triângulo. Informe se os valores podem ser um triângulo.Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. Dica: pesquise sobre a regra para saber se os lados formam um triângulo e também sobre os tipos de triângulos.
 
     //Entrada
-
+    const ladoA = Number(prompt(`Escreva a primeira medida`).replace(",", "."));
+    const ladoB = Number(prompt(`Escreva a segunda medida`).replace(",", "."));
+    const ladoC = Number(prompt(`Escreva a terceira medida`).replace(",", "."));
 
     //Processamento
-
-
-    //Saída
+    if (ladoA + ladoB > ladoC && ladoA + ladoC > ladoB && ladoC + ladoB > ladoA) {
+        if (ladoA == ladoB && ladoA == ladoC) {
+            document.write(`É um triângulo equilátero`)
+        }
+        else if (ladoA != ladoB && ladoA != ladoC && ladoC != ladoB) {
+            document.write(`É um triângulo escaleno`)
+        }
+        else {
+            document.write(`É um triângulo isósceles`);
+        }
+    }
+    else {
+        document.write(`Não é um triângulo`);
+    }
 </script>
