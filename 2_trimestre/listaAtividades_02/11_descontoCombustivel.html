@@ -16,11 +16,15 @@
     */
 
     //ENTRADA
-
+    const litroVendido = Number(prompt(`Insira o tanto de litros vendidos:`).trim().replace(",", "."));
+    const combustivel = prompt(`Insira o tipo de Combústivel: (A-álcool, G-gasolina)`).toUpperCase();
+    let resultado = 0;
 
     //PROCESSAMENTO
-
-    
+    if(combustivel == "A") {
+        if(litroVendido <= 20)
+        resultado = (litroVendido * 6,10) * 0.97
+    }
     //SAÍDA
 
 
