@@ -7,8 +7,13 @@
     */
 
     //ENTRADA
-
-
+    const numero = Number(prompt(`Insira um numero: (inteiro ou decimal)`).trim().replace(",", "."));
+    if(numero % 1 == 0) {
+        alert("Inteiro")
+    }
+    else {
+        alert("Decimal")
+    }
     //PROCESSAMENTO
 
     
