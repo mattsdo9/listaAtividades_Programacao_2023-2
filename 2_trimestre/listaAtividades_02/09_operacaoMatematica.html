@@ -9,9 +9,9 @@
     */
 
     //ENTRADA
-    const numero = Number(prompt(`Insira um numero:`).trim().replace(",", "."));
-    const numero2 = Number(prompt(`Insira um numero:`).trim().replace(",", "."));
-    const operacao = prompt(`Qual operação você deseja realizar? (M-multiplicação, D-divisão, S-subtração e A-adição)`).toUpperCase();
+    const numero = Number(prompt(`Insira um numero inteiro:`).trim().replace(",", "."));
+    const numero2 = Number(prompt(`Insira outro numero inteiro:`).trim().replace(",", "."));
+    const operacao = prompt(`Qual operação você deseja realizar? (M-multiplicação, D-divisão, S-subtração e A-adição)`).trim().toUpperCase();
     let resultado = 0;
 
     if (operacao == "M") {
